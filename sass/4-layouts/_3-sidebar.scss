@@ -73,9 +73,7 @@ $link-color: map-get($sidebar, link-color);
     }
 
     &__input {
-        display: block;
-        position: fixed;
-        z-index: 200;
+        display: none;
     }
 
     &__footer {
