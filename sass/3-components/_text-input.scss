@@ -1,0 +1,83 @@
+$bg-color: map-get($text-input, bg-color);
+$label-color: map-get($text-input, label-color);
+
+$bg-color-active: map-get($text-input, bg-color-active);
+$label-color-active: map-get($text-input, label-color-active);
+
+$text-color: map-get($text-input, text-color);
+$placeholder-color: map-get($text-input, placeholder-color);
+
+.text-input {
+    width: 30rem;
+    
+    &__input {
+        width: 100%;
+        padding: 1.15rem 1.25rem;
+        font-family: $arvo-ff;
+        letter-spacing: 2px;
+        font-size: 2rem;
+        background-color: transparent;
+        background-color: $bg-color;
+        transition: $ts;
+        color: $text-color;
+        
+        &::placeholder {
+            user-select: none;
+            transition: $ts;
+            color: $placeholder-color;
+            font-size: 1.5rem;
+            font-family: $arvo-ff;
+            text-transform: capitalize;
+            font-weight: lighter;
+            letter-spacing: 3px;
+            word-spacing: 6px;
+
+            @include media-break-point(mobile) {
+                text-align: center;
+            };
+        }
+    }
+
+    &__label {
+        @include position(absolute, 50% null null 0px);
+        transform: translateY(-50%) scale(1);
+        color: $label-color;
+        font-size: 1.5rem;
+        font-family: $arvo-ff;
+        text-transform: capitalize;
+        font-weight: lighter;
+        letter-spacing: 3px;
+        word-spacing: 6px;
+        margin-left: 1.25rem;
+        transition: $ts;
+        transform-origin: left;
+        opacity: 0;
+        cursor: text;
+    }
+
+    //on change
+    &__input {
+        &:focus, &:valid {
+            transition: $ts;
+            background-color: $bg-color-active;
+
+            &::placeholder {
+                transition: $ts;
+                color: transparent;
+                font-size: 1.5rem;
+                font-family: $arvo-ff;
+                text-transform: capitalize;
+                font-weight: lighter;
+                letter-spacing: 3px;
+                word-spacing: 6px;
+            }
+
+            & ~ .text-input__label {
+                transition: $ts;
+                transform: translateY(-300%) scale(0.75);
+                color: $label-color-active;
+                opacity: 1;
+            }
+        }
+    }
+}

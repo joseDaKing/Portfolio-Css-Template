@@ -1,0 +1,236 @@
+$header-bg-color: map-get($sidebar, header-bg-color);
+$footer-bg-color: map-get($sidebar, footer-bg-color);
+$tg-btn-color: map-get($sidebar, tg-btn-color);
+$link-color: map-get($sidebar, link-color);
+
+.sidebar {
+    position: static;
+
+    @include media-break-point(desktop-large) {
+        display: none;
+    };
+
+    @include media-break-point(desktop) {
+        display: none;
+    };
+
+    @include media-break-point(tablet) {
+        display: block;
+    };
+
+    &__header {
+        &::before {
+            content: "";
+            @include position(absolute, 0px 0px 0px 0px);
+            background-color: $header-bg-color;
+        }
+        padding: 2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @include position(fixed, 0px null null 0px);
+        width: 100%;
+        z-index: 3;
+        padding-right: 3rem;
+
+        @include media-break-point(mobile) {
+            bottom: 0px;
+            top: auto;
+            padding: 1rem;
+        };
+
+        @include media-break-point(mobile-h) {
+            bottom: 0px;
+            top: auto;
+            padding: 1rem;
+        };
+    }
+
+    &__tg-btn {
+        display: block;
+        width: 5rem;
+        height: 5rem;
+        margin: auto;
+        cursor: pointer;
+
+        &-elem {
+            height: 4px;
+            width: 5rem;
+            margin: auto;
+            margin-top: 1rem;
+            background-color: $tg-btn-color;
+
+            @include media-break-point(mobile) {
+                height: 3px;
+                width: 4rem;
+                margin-top: .75rem;
+            };
+
+            &:first-child {
+                margin-top: 0px;
+            }
+        }
+    }
+
+    &__input {
+        display: block;
+        position: fixed;
+        z-index: 200;
+    }
+
+    &__footer {
+        @include position(fixed, 10rem 0px 0px null);
+        z-index: 2;
+
+        &::before {
+            content: "";
+            @include position(absolute, 0px 0px null null);
+            height: 150%;
+            width: 100%;
+            background-color: $footer-bg-color;
+            @include gradient(linear, 90deg, 
+                        $footer-bg-color, 
+                        is-light($footer-bg-color,
+                                tint($footer-bg-color, 15%),
+                                shade($footer-bg-color, 15%))
+                        );
+        }
+
+        box-shadow: 0px 0px 0px 1000vh rgba(0, 0, 0, 0.0);
+
+
+        width: 30rem;
+        transform: translateX(100%);
+        transition: $ts;
+        transition-duration: .7s;
+        overflow-y: auto;
+
+        @include media-break-point(mobile) {
+            @include position(fixed, 0px 0px 6.9rem 0px);
+            width: auto;
+            
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+         
+        };
+
+        @include media-break-point(mobile-h) {
+            @include position(fixed, 0px 0px 6.9rem 0px);
+            width: auto;
+            
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            overflow-y: hidden;
+        };
+    }
+
+    &__link {
+        font-family: $oswald-ff;
+        font-size: 2.2rem;
+        padding: 4.5rem 6rem;
+        word-spacing: 4px;
+        letter-spacing: 2px;
+        color: $link-color;
+        text-align: center;
+
+        &::first-letter {
+            text-transform: capitalize;
+        }
+
+        @include media-break-point(mobile) {
+            padding-top: 2rem;
+            padding-bottom: 2rem;
+        };
+
+        @include media-break-point(mobile-h) {
+            padding-top: 1.3rem;
+            padding-bottom: 1.3rem;
+        };
+    }
+
+    &__active {
+        &::before {
+            content: "";
+            @include position(absolute, 0px 0px 0px null);
+            width: 4px;
+            margin: 1rem 2rem;
+            background-color: $link-color;
+
+            @include media-break-point(mobile) {
+                @include position(absolute, 0px 0px 0px 0px);
+                height: 4px;
+                width: 80%;
+                margin: auto;
+                margin-bottom: 0px;
+            };
+
+            @include media-break-point(mobile-h) {
+                @include position(absolute, 0px 0px 0px 0px);
+                height: 4px;
+                width: 80%;
+                margin: auto;
+                margin-bottom: 0px;
+            };
+        }
+    }
+
+    &__img-box {
+        width: 6rem;
+        height: 6rem;
+        margin: 2rem 0px;
+
+        @include media-break-point(mobile) {
+            width: 4rem;
+            height: 4rem;
+            margin: 1.25rem 2.5rem;
+        };
+
+        @include media-break-point(mobile-h) {
+            width: 4rem;
+            height: 4rem;
+            margin: 1.25rem 2.5rem;
+        };
+    }
+
+    &__img {
+        display: block;
+        margin: auto;
+        width: auto;
+        
+        @if lightness($footer-bg-color) < 50 {
+            filter: invert(100%);
+        }
+    }
+
+    &__social {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: flex-start;
+
+        @include media-break-point(mobile) {
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 3.5rem;
+            margin-bottom: 2rem;
+        };
+
+        @include media-break-point(mobile-h) {
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 3.5rem;
+            margin-bottom: 3rem;
+        };
+    }
+
+    &__input:checked + .sidebar__footer {
+        transform: translateX(0px);
+        transition: $ts;
+        transition-duration: .7s;
+        box-shadow: 0px 0px 0px 1000vh rgba(0, 0, 0, 0.7);
+    }
+}

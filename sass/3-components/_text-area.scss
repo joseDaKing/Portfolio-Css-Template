@@ -1,0 +1,15 @@
+$bg-color: map-get($text-area, bg-color);
+$font-color: map-get($text-area, font-color);
+
+.text-area {
+    width: 100%;
+    min-height: 25rem;
+    padding: 2rem 3rem;
+    resize: vertical;
+    background-color: $bg-color;
+    font-family: $arvo-ff;
+    font-weight: lighter;
+    word-spacing: 6px;
+    letter-spacing: 1.5px;
+    color: $font-color;
+}

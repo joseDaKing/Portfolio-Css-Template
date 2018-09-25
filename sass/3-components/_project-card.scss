@@ -1,0 +1,127 @@
+$bg-color: map-get($project-card, bg-color);
+$main-title-color: map-get($project-card, main-title-color);
+$sub-title-color: map-get($project-card, sub-title-color);
+
+.project-card {
+    max-width: 35rem;
+    width: 100%;
+    height: 23rem;
+
+    @include media-break-point(tablet) {
+        margin: auto;
+        margin-bottom: 4rem;
+        max-width: 100%;
+        height: 36rem;
+    };
+
+    @include media-break-point(mobile) {
+        margin: auto;
+        margin-bottom: 4rem;
+        height: 60rem;
+        max-width: 40rem;
+    };
+
+    &:hover {
+        .project-card__container {
+            transition: $ts;
+            transform: rotateY(180deg);
+
+            @include media-break-point(tablet) {
+                transform: none;
+            };
+        }
+    }
+
+    &__container {
+        width: 100%;
+        height: 100%;
+        transform-style: preserve-3d;
+        backface-visibility: visible;
+        transition: $ts;
+
+        @include media-break-point(tablet) {
+            border: solid 1rem $bg-color;
+        };
+    }
+
+    &__front, &__back {
+        @include position(absolute, 0px 0px 0px 0px);
+    }
+
+    &__back {
+        background-color: $bg-color;    
+        @include gradient(radial, circle, 
+            is-light($bg-color, 
+                tint($bg-color, 20%), 
+                shade($bg-color, 20%) ), 
+            $bg-color 70%);
+            background-size: contain;
+
+        padding: 2.5rem;
+        text-align: center;
+        transform: rotateY(180deg);
+
+        @include media-break-point(tablet) {
+            top: 0px;
+            right: 0px;
+            left: auto;
+            bottom: auto;
+            width: 50%;
+            height: 100%;
+            transform: rotateX(0deg);
+            text-align: left;
+        };
+
+        @include media-break-point(mobile) {
+            width: 100%;
+            height: 50%;
+            
+            top: 50%;
+            left: 0px;
+            
+            text-align: center;
+        };
+    }
+
+    &__front {
+        overflow: hidden;
+
+        @include media-break-point(tablet) {
+            top: 0px;
+            right: auto;
+            left: 0px;
+            bottom: auto;
+            width: 50%;
+            height: 100%;
+        };
+
+        @include media-break-point(mobile) {
+            width: 100%;
+            height: 50%;
+            
+            top: 0px;
+            left: 0px;
+        };
+    }
+
+    &__img {
+        width: 100%;
+    }
+
+    &__main-title {
+        font-family: $oswald-ff;
+        color: $main-title-color;
+        font-size: 2.5rem;
+        font-weight: bolder;
+        text-transform: capitalize;
+        margin-bottom: 2rem;
+    }
+
+    &__sub-title {
+        font-family: $oswald-ff;
+        color: $sub-title-color;
+        font-size: 2.15rem;
+        font-weight: lighter;
+        text-transform: capitalize;
+    }
+}

@@ -1,0 +1,146 @@
+$tg-btn-bg-color: map-get($social, tg-btn-bg-color);
+$icon-bg-color: map-get($social, icon-bg-color);
+
+$tg-btn-radius: 6.2rem;
+$icon-radius: 4.3rem;
+
+$icons-array-length: 4;
+$icon-animation-delay: 0.1s;
+
+
+
+.social {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    user-select: none;
+    @include position(fixed, null 0px 8rem null);
+    z-index: 1;
+
+    @include media-break-point(tablet) {
+        display: none;
+    };
+
+    &__input {
+        display: none;
+    }
+
+    &__tg-btn {
+        width: $tg-btn-radius;
+        height: $tg-btn-radius;
+        border-radius: 100%;
+
+        margin: 1rem 6rem;
+        cursor: pointer;
+
+        order: 2;
+        transition: $ts;
+
+        &::after {
+            content: "";
+            @include position(absolute, 0px 0px 0px 0px);
+            background-color: $icon-bg-color;
+            border-radius: 100%;
+            transform: scale(0);
+            z-index: -1;
+        }
+
+        &:active {
+            &::after {
+                animation: splash .35s ease 0s 1 normal forwards;
+                animation-play-state: running;
+            }
+        }
+
+        z-index: 1;
+    }
+
+    &__icons {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        order: 1;
+        visibility: hidden;
+        z-index: 0;
+    }
+
+    &__icon {
+        width: $icon-radius;
+        height: $icon-radius;
+        border-radius: 100%;
+
+        margin: 1.35rem 6rem;
+
+        opacity: 0;
+        transition: $ts;
+        transform: translateY(200%);
+
+        @for $i from 1 to ($icons-array-length + 1) {
+            &:nth-child(#{$i}) {
+                transition-delay: $icon-animation-delay * $i;
+                z-index: $i;
+            }
+        }
+
+        &::after {
+            content: "";
+            @include position(absolute, 0px 0px 0px 0px);
+            background-color: map-get($social, icon-bg-color);
+            border-radius: 100%;
+            transform: scale(0);
+            z-index: -1;
+        }
+
+        &:active {
+            &::after {
+                animation: splash .35s ease 0s 1 normal forwards;
+                animation-play-state: running;
+            }
+        }
+    }
+
+    &__tg-btn, &__icon {
+        background-color: $tg-btn-bg-color;
+        @include gradient(radial, circle, 
+                        is-light($tg-btn-bg-color,
+                        tint($tg-btn-bg-color, 20%), 
+                        shade($tg-btn-bg-color, 20%)) 0%,
+                        $tg-btn-bg-color);
+        background-size: contain;
+        background-position: center;
+    }
+
+    &__img {
+        display: block;
+        width: 50%;
+        @include position(absolute, 0px 0px 0px 0px);
+        margin: auto;
+
+        @if( lightness($tg-btn-bg-color) < 50%) {
+           filter: invert(90%);
+        }
+
+        @else {
+            filter: invert(10%);
+        }
+    }
+
+    //toggle active
+    &__input:checked ~ {
+        .social__icons {
+            visibility: visible;
+
+            .social__icon {
+                transition: $ts;
+                opacity: 1;
+                transform: translateY(0%);
+            }
+
+            @for $i from 1 to ($icons-array-length + 1) {
+                .social__icon:nth-child(#{$i}) {
+                    transition-delay: $icon-animation-delay * ($icons-array-length + 1 - $i);
+                }
+            }
+        }   
+    }
+}

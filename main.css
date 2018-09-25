@@ -1,0 +1,1669 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+/* line 6, C:/Users/Yousefs_Dator/Desktop/Projekt/Min portfolio webb sida/Html & Sass & JS/sass/2-base/_2-reset.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+/* line 27, C:/Users/Yousefs_Dator/Desktop/Projekt/Min portfolio webb sida/Html & Sass & JS/sass/2-base/_2-reset.scss */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+/* line 31, C:/Users/Yousefs_Dator/Desktop/Projekt/Min portfolio webb sida/Html & Sass & JS/sass/2-base/_2-reset.scss */
+body {
+  line-height: 1;
+}
+
+/* line 34, C:/Users/Yousefs_Dator/Desktop/Projekt/Min portfolio webb sida/Html & Sass & JS/sass/2-base/_2-reset.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 37, C:/Users/Yousefs_Dator/Desktop/Projekt/Min portfolio webb sida/Html & Sass & JS/sass/2-base/_2-reset.scss */
+blockquote, q {
+  quotes: none;
+}
+
+/* line 40, C:/Users/Yousefs_Dator/Desktop/Projekt/Min portfolio webb sida/Html & Sass & JS/sass/2-base/_2-reset.scss */
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+/* line 45, C:/Users/Yousefs_Dator/Desktop/Projekt/Min portfolio webb sida/Html & Sass & JS/sass/2-base/_2-reset.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 1, C:/Users/Yousefs_Dator/Desktop/Projekt/Min portfolio webb sida/Html & Sass & JS/sass/2-base/_3-base.scss */
+:root {
+  /* 
+    @include media-break-point(mobile) {
+        font-size: 50%;
+    }; 
+    */
+}
+
+@media only screen and (min-width: 1488px) {
+  /* line 1, C:/Users/Yousefs_Dator/Desktop/Projekt/Min portfolio webb sida/Html & Sass & JS/sass/2-base/_3-base.scss */
+  :root {
+    font-size: 90%;
+  }
+}
+
+@media only screen and (max-width: 1488px) {
+  /* line 1, C:/Users/Yousefs_Dator/Desktop/Projekt/Min portfolio webb sida/Html & Sass & JS/sass/2-base/_3-base.scss */
+  :root {
+    font-size: 62.5%;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  /* line 1, C:/Users/Yousefs_Dator/Desktop/Projekt/Min portfolio webb sida/Html & Sass & JS/sass/2-base/_3-base.scss */
+  :root {
+    font-size: 50%;
+  }
+}
+
+/* line 21, C:/Users/Yousefs_Dator/Desktop/Projekt/Min portfolio webb sida/Html & Sass & JS/sass/2-base/_3-base.scss */
+a {
+  color: black;
+  text-decoration: none;
+}
+
+/* line 26, C:/Users/Yousefs_Dator/Desktop/Projekt/Min portfolio webb sida/Html & Sass & JS/sass/2-base/_3-base.scss */
+*, *::before, *::after {
+  position: relative;
+  box-sizing: border-box;
+  backface-visibility: hidden;
+}
+
+/* line 32, C:/Users/Yousefs_Dator/Desktop/Projekt/Min portfolio webb sida/Html & Sass & JS/sass/2-base/_3-base.scss */
+input, button, textarea {
+  border: none;
+  outline: none;
+}
+
+/* line 37, C:/Users/Yousefs_Dator/Desktop/Projekt/Min portfolio webb sida/Html & Sass & JS/sass/2-base/_3-base.scss */
+input, label, button, a, textarea {
+  display: block;
+  display: block;
+  margin: 0px;
+  padding: 0px;
+}
+
+/* line 1, C:/Users/Yousefs_Dator/Desktop/Projekt/Min portfolio webb sida/Html & Sass & JS/sass/2-base/_4-utilities.scss */
+.u-container {
+  width: 100%;
+  max-width: 95rem;
+  margin: auto;
+}
+
+/* line 8, C:/Users/Yousefs_Dator/Desktop/Projekt/Min portfolio webb sida/Html & Sass & JS/sass/2-base/_4-utilities.scss */
+.u-margin-auto {
+  margin: auto;
+}
+
+/* line 13, C:/Users/Yousefs_Dator/Desktop/Projekt/Min portfolio webb sida/Html & Sass & JS/sass/2-base/_4-utilities.scss */
+.u-margin-sm-top {
+  margin-top: 2rem;
+}
+
+/* line 17, C:/Users/Yousefs_Dator/Desktop/Projekt/Min portfolio webb sida/Html & Sass & JS/sass/2-base/_4-utilities.scss */
+.u-margin-sm-bottom {
+  margin-bottom: 2rem;
+}
+
+/* line 23, C:/Users/Yousefs_Dator/Desktop/Projekt/Min portfolio webb sida/Html & Sass & JS/sass/2-base/_4-utilities.scss */
+.u-margin-md-top {
+  margin-top: 4rem;
+}
+
+/* line 27, C:/Users/Yousefs_Dator/Desktop/Projekt/Min portfolio webb sida/Html & Sass & JS/sass/2-base/_4-utilities.scss */
+.u-margin-md-bottom {
+  margin-bottom: 4rem;
+}
+
+/* line 33, C:/Users/Yousefs_Dator/Desktop/Projekt/Min portfolio webb sida/Html & Sass & JS/sass/2-base/_4-utilities.scss */
+.u-margin-lg-top {
+  margin-top: 6rem;
+}
+
+/* line 37, C:/Users/Yousefs_Dator/Desktop/Projekt/Min portfolio webb sida/Html & Sass & JS/sass/2-base/_4-utilities.scss */
+.u-margin-lg-bottom {
+  margin-bottom: 6rem;
+}
+
+/* line 46, C:/Users/Yousefs_Dator/Desktop/Projekt/Min portfolio webb sida/Html & Sass & JS/sass/2-base/_4-utilities.scss */
+.u-text-align-center {
+  text-align: center;
+}
+
+/* line 50, C:/Users/Yousefs_Dator/Desktop/Projekt/Min portfolio webb sida/Html & Sass & JS/sass/2-base/_4-utilities.scss */
+.u-text-align-left {
+  text-align: left;
+}
+
+/* line 1, C:/Users/Yousefs_Dator/Desktop/Projekt/Min portfolio webb sida/Html & Sass & JS/sass/2-base/_5-typography.scss */
+.main-title {
+  font-size: 4rem;
+  font-family: "Oswald", sans-serif;
+  letter-spacing: 3px;
+  text-transform: capitalize;
+  text-align: center;
+  font-weight: bolder;
+  color: #f2f2f2;
+}
+
+/* line 11, C:/Users/Yousefs_Dator/Desktop/Projekt/Min portfolio webb sida/Html & Sass & JS/sass/2-base/_5-typography.scss */
+.sub-title {
+  font-size: 3.2rem;
+  font-family: "Oswald", sans-serif;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: lighter;
+  color: #3a3a3a;
+}
+
+/* line 20, C:/Users/Yousefs_Dator/Desktop/Projekt/Min portfolio webb sida/Html & Sass & JS/sass/2-base/_5-typography.scss */
+.sub-title::before {
+  content: "";
+  position: absolute;
+  top: -2rem;
+  right: 0px;
+  left: 0px;
+  transform: translateX(0%);
+  width: 15rem;
+  height: 0.2rem;
+  margin: auto;
+  background-color: #3a3a3a;
+}
+
+/* line 31, C:/Users/Yousefs_Dator/Desktop/Projekt/Min portfolio webb sida/Html & Sass & JS/sass/2-base/_5-typography.scss */
+.tertiary-title {
+  font-size: 2.8rem;
+  font-family: "Oswald", sans-serif;
+  letter-spacing: 3px;
+  text-transform: capitalize;
+  text-align: center;
+  font-weight: lighter;
+  color: #627178;
+}
+
+/* line 41, C:/Users/Yousefs_Dator/Desktop/Projekt/Min portfolio webb sida/Html & Sass & JS/sass/2-base/_5-typography.scss */
+.text {
+  font-size: 1.7rem;
+  line-height: 2.5rem;
+  letter-spacing: 2px;
+  word-spacing: 3px;
+  color: #797979;
+  font-family: "Arvo", serif;
+  font-weight: lighter;
+}
+
+/* line 51, C:/Users/Yousefs_Dator/Desktop/Projekt/Min portfolio webb sida/Html & Sass & JS/sass/2-base/_5-typography.scss */
+.link {
+  font-family: "Arvo", serif;
+  font-size: 1.7rem;
+  color: #6498b2;
+  cursor: pointer;
+  display: inline;
+  text-transform: capitalize;
+  transition: all 300ms ease 0s;
+}
+
+/* line 60, C:/Users/Yousefs_Dator/Desktop/Projekt/Min portfolio webb sida/Html & Sass & JS/sass/2-base/_5-typography.scss */
+.link::before {
+  content: "";
+  position: absolute;
+  right: 0px;
+  bottom: -4px;
+  left: 0px;
+  height: 0.1rem;
+  background-color: #002f43;
+  transform: scaleX(0);
+  transition: all 300ms ease 0s;
+  transform-origin: left;
+}
+
+/* line 70, C:/Users/Yousefs_Dator/Desktop/Projekt/Min portfolio webb sida/Html & Sass & JS/sass/2-base/_5-typography.scss */
+.link:hover, .link:active {
+  transition: all 300ms ease 0s;
+  color: #002f43;
+}
+
+/* line 73, C:/Users/Yousefs_Dator/Desktop/Projekt/Min portfolio webb sida/Html & Sass & JS/sass/2-base/_5-typography.scss */
+.link:hover::before, .link:active::before {
+  transition: all 300ms ease 0s;
+  transform: scaleX(1);
+}
+
+@keyframes splash {
+  0% {
+    opacity: 1;
+    transform: scale(0);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(2);
+  }
+}
+
+/* line 1, C:/Users/Yousefs_Dator/Desktop/Projekt/Min portfolio webb sida/Html & Sass & JS/sass/3-components/_brand.scss */
+.brand {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* line 6, C:/Users/Yousefs_Dator/Desktop/Projekt/Min portfolio webb sida/Html & Sass & JS/sass/3-components/_brand.scss */
+.brand__img-box {
+  width: 100%;
+  max-width: 8rem;
+}
+
+/* line 11, C:/Users/Yousefs_Dator/Desktop/Projekt/Min portfolio webb sida/Html & Sass & JS/sass/3-components/_brand.scss */
+.brand__img {
+  display: block;
+  width: 100%;
+  margin: auto;
+}
+
+/* line 17, C:/Users/Yousefs_Dator/Desktop/Projekt/Min portfolio webb sida/Html & Sass & JS/sass/3-components/_brand.scss */
+.brand__name {
+  padding: 1.5rem;
+  font-size: 3rem;
+  letter-spacing: 20px;
+  text-transform: uppercase;
+  font-family: "Unica One", cursive;
+  font-weight: bolder;
+  color: #e8e8e8;
+}
+
+@media only screen and (max-width: 591px) {
+  /* line 17, C:/Users/Yousefs_Dator/Desktop/Projekt/Min portfolio webb sida/Html & Sass & JS/sass/3-components/_brand.scss */
+  .brand__name {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (max-height: 591px) {
+  /* line 17, C:/Users/Yousefs_Dator/Desktop/Projekt/Min portfolio webb sida/Html & Sass & JS/sass/3-components/_brand.scss */
+  .brand__name {
+    font-size: 2rem;
+  }
+}
+
+/* line 5, C:/Users/Yousefs_Dator/Desktop/Projekt/Min portfolio webb sida/Html & Sass & JS/sass/3-components/_section.scss */
+.section {
+  padding-bottom: 5rem;
+  padding-top: 12rem;
+  padding-left: 15rem;
+  padding-right: 15rem;
+  z-index: 0;
+}
+
+@media only screen and (max-width: 1024px) {
+  /* line 5, C:/Users/Yousefs_Dator/Desktop/Projekt/Min portfolio webb sida/Html & Sass & JS/sass/3-components/_section.scss */
+  .section {
+    padding-left: 3rem;
+    padding-right: 3rem;
+    padding-top: 18rem;
+  }
+}
+
+@media only screen and (max-width: 591px) {
+  /* line 5, C:/Users/Yousefs_Dator/Desktop/Projekt/Min portfolio webb sida/Html & Sass & JS/sass/3-components/_section.scss */
+  .section {
+    padding-left: 1.7rem;
+    padding-right: 1.7rem;
+    padding-top: 7rem;
+  }
+}
+
+/* line 26, C:/Users/Yousefs_Dator/Desktop/Projekt/Min portfolio webb sida/Html & Sass & JS/sass/3-components/_section.scss */
+.section--color-primary {
+  background-color: #112832;
+  background-image: radial-gradient(circle, #293e47, #112832 70%);
+}
+
+/* line 35, C:/Users/Yousefs_Dator/Desktop/Projekt/Min portfolio webb sida/Html & Sass & JS/sass/3-components/_section.scss */
+.section--color-secondary {
+  background-color: #e8e8e8;
+}
+
+/* line 39, C:/Users/Yousefs_Dator/Desktop/Projekt/Min portfolio webb sida/Html & Sass & JS/sass/3-components/_section.scss */
+.section--color-tertiary {
+  background-color: #f2f2f2;
+}
+
+/* line 1, C:/Users/Yousefs_Dator/Desktop/Projekt/Min portfolio webb sida/Html & Sass & JS/sass/3-components/_img-box.scss */
+.img-box {
+  width: 100%;
+  height: 100%;
+  max-width: 32rem;
+  max-height: 32rem;
+  overflow: hidden;
+  margin: auto;
+}
+
+/* line 9, C:/Users/Yousefs_Dator/Desktop/Projekt/Min portfolio webb sida/Html & Sass & JS/sass/3-components/_img-box.scss */
+.img-box--round {
+  border-radius: 100%;
+}
+
+/* line 13, C:/Users/Yousefs_Dator/Desktop/Projekt/Min portfolio webb sida/Html & Sass & JS/sass/3-components/_img-box.scss */
+.img-box__img {
+  display: block;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+/* line 5, C:/Users/Yousefs_Dator/Desktop/Projekt/Min portfolio webb sida/Html & Sass & JS/sass/3-components/_skill-card.scss */
+.skill-container {
+  display: grid;
+  grid-template-areas: "one two three";
+  justify-items: center;
+}
+
+@media only screen and (max-width: 1150px) {
+  /* line 5, C:/Users/Yousefs_Dator/Desktop/Projekt/Min portfolio webb sida/Html & Sass & JS/sass/3-components/_skill-card.scss */
+  .skill-container {
+    grid-template-areas: "one two" "three three";
+    justify-items: center;
+    justify-content: stretch;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  /* line 5, C:/Users/Yousefs_Dator/Desktop/Projekt/Min portfolio webb sida/Html & Sass & JS/sass/3-components/_skill-card.scss */
+  .skill-container {
+    grid-template-areas: "one" "two" "three";
+    text-align: center;
+  }
+}
+
+/* line 28, C:/Users/Yousefs_Dator/Desktop/Projekt/Min portfolio webb sida/Html & Sass & JS/sass/3-components/_skill-card.scss */
+.skill-card {
+  width: 100%;
+  max-width: 27rem;
+  padding: 1rem;
+}
+
+@media only screen and (max-width: 1150px) {
+  /* line 28, C:/Users/Yousefs_Dator/Desktop/Projekt/Min portfolio webb sida/Html & Sass & JS/sass/3-components/_skill-card.scss */
+  .skill-card {
+    max-width: 100%;
+    padding: 0px 4rem;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  /* line 28, C:/Users/Yousefs_Dator/Desktop/Projekt/Min portfolio webb sida/Html & Sass & JS/sass/3-components/_skill-card.scss */
+  .skill-card {
+    padding: 0px 2rem;
+    margin-bottom: 12rem;
+  }
+}
+
+/* line 43, C:/Users/Yousefs_Dator/Desktop/Projekt/Min portfolio webb sida/Html & Sass & JS/sass/3-components/_skill-card.scss */
+.skill-card__img-box {
+  width: 100%;
+  max-width: 16rem;
+  margin: auto;
+  margin-bottom: 6rem;
+}
+
+/* line 50, C:/Users/Yousefs_Dator/Desktop/Projekt/Min portfolio webb sida/Html & Sass & JS/sass/3-components/_skill-card.scss */
+.skill-card__img {
+  width: 100%;
+  margin: auto;
+}
+
+/* line 59, C:/Users/Yousefs_Dator/Desktop/Projekt/Min portfolio webb sida/Html & Sass & JS/sass/3-components/_skill-card.scss */
+.skill-card__title {
+  font-family: "Oswald", sans-serif;
+  text-transform: uppercase;
+  font-size: 2.5rem;
+  word-spacing: 3px;
+  letter-spacing: 1px;
+  text-align: center;
+  color: #112832;
+}
+
+/* line 68, C:/Users/Yousefs_Dator/Desktop/Projekt/Min portfolio webb sida/Html & Sass & JS/sass/3-components/_skill-card.scss */
+.skill-card__title::before {
+  content: "";
+  position: absolute;
+  right: 0px;
+  bottom: -2rem;
+  left: 0px;
+  height: 0.3rem;
+  background-color: #aeaeae;
+}
+
+/* line 76, C:/Users/Yousefs_Dator/Desktop/Projekt/Min portfolio webb sida/Html & Sass & JS/sass/3-components/_skill-card.scss */
+.skill-card__header {
+  margin-bottom: 3.5rem;
+}
+
+/* line 80, C:/Users/Yousefs_Dator/Desktop/Projekt/Min portfolio webb sida/Html & Sass & JS/sass/3-components/_skill-card.scss */
+.skill-card__footer {
+  margin-bottom: 3rem;
+}
+
+/* line 84, C:/Users/Yousefs_Dator/Desktop/Projekt/Min portfolio webb sida/Html & Sass & JS/sass/3-components/_skill-card.scss */
+.skill-card__sub-title {
+  font-size: 2rem;
+  font-family: "Oswald", sans-serif;
+  word-spacing: 2px;
+  letter-spacing: 1px;
+  color: #3d3d3d;
+  text-transform: capitalize;
+}
+
+/* line 92, C:/Users/Yousefs_Dator/Desktop/Projekt/Min portfolio webb sida/Html & Sass & JS/sass/3-components/_skill-card.scss */
+.skill-card__sub-title:not(:last-child) {
+  margin-bottom: 2rem;
+}
+
+/* line 98, C:/Users/Yousefs_Dator/Desktop/Projekt/Min portfolio webb sida/Html & Sass & JS/sass/3-components/_skill-card.scss */
+.skill-card__section:not(:last-child) {
+  margin-bottom: 4rem;
+}
+
+/* line 103, C:/Users/Yousefs_Dator/Desktop/Projekt/Min portfolio webb sida/Html & Sass & JS/sass/3-components/_skill-card.scss */
+.skill-card__link {
+  line-height: 3rem;
+}
+
+/* line 106, C:/Users/Yousefs_Dator/Desktop/Projekt/Min portfolio webb sida/Html & Sass & JS/sass/3-components/_skill-card.scss */
+.skill-card__link::after {
+  content: ",";
+  display: block;
+  position: absolute;
+  right: -0.2rem;
+  bottom: -0.7rem;
+}
+
+/* line 112, C:/Users/Yousefs_Dator/Desktop/Projekt/Min portfolio webb sida/Html & Sass & JS/sass/3-components/_skill-card.scss */
+.skill-card__link:last-child::after {
+  content: ".";
+  right: -0.35rem;
+}
+
+/* line 117, C:/Users/Yousefs_Dator/Desktop/Projekt/Min portfolio webb sida/Html & Sass & JS/sass/3-components/_skill-card.scss */
+.skill-card__link:not(:last-child) {
+  margin-right: 1rem;
+}
+
+/* line 122, C:/Users/Yousefs_Dator/Desktop/Projekt/Min portfolio webb sida/Html & Sass & JS/sass/3-components/_skill-card.scss */
+.skill-card__1 {
+  grid-area: one;
+}
+
+/* line 126, C:/Users/Yousefs_Dator/Desktop/Projekt/Min portfolio webb sida/Html & Sass & JS/sass/3-components/_skill-card.scss */
+.skill-card__2 {
+  grid-area: two;
+}
+
+/* line 130, C:/Users/Yousefs_Dator/Desktop/Projekt/Min portfolio webb sida/Html & Sass & JS/sass/3-components/_skill-card.scss */
+.skill-card__3 {
+  grid-area: three;
+}
+
+/* line 5, C:/Users/Yousefs_Dator/Desktop/Projekt/Min portfolio webb sida/Html & Sass & JS/sass/3-components/_project-card.scss */
+.project-card {
+  max-width: 35rem;
+  width: 100%;
+  height: 23rem;
+}
+
+@media only screen and (max-width: 1024px) {
+  /* line 5, C:/Users/Yousefs_Dator/Desktop/Projekt/Min portfolio webb sida/Html & Sass & JS/sass/3-components/_project-card.scss */
+  .project-card {
+    margin: auto;
+    margin-bottom: 4rem;
+    max-width: 100%;
+    height: 36rem;
+  }
+}
+
+@media only screen and (max-width: 591px) {
+  /* line 5, C:/Users/Yousefs_Dator/Desktop/Projekt/Min portfolio webb sida/Html & Sass & JS/sass/3-components/_project-card.scss */
+  .project-card {
+    margin: auto;
+    margin-bottom: 4rem;
+    height: 60rem;
+    max-width: 40rem;
+  }
+}
+
+/* line 25, C:/Users/Yousefs_Dator/Desktop/Projekt/Min portfolio webb sida/Html & Sass & JS/sass/3-components/_project-card.scss */
+.project-card:hover .project-card__container {
+  transition: all 300ms ease 0s;
+  transform: rotateY(180deg);
+}
+
+@media only screen and (max-width: 1024px) {
+  /* line 25, C:/Users/Yousefs_Dator/Desktop/Projekt/Min portfolio webb sida/Html & Sass & JS/sass/3-components/_project-card.scss */
+  .project-card:hover .project-card__container {
+    transform: none;
+  }
+}
+
+/* line 35, C:/Users/Yousefs_Dator/Desktop/Projekt/Min portfolio webb sida/Html & Sass & JS/sass/3-components/_project-card.scss */
+.project-card__container {
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  backface-visibility: visible;
+  transition: all 300ms ease 0s;
+}
+
+@media only screen and (max-width: 1024px) {
+  /* line 35, C:/Users/Yousefs_Dator/Desktop/Projekt/Min portfolio webb sida/Html & Sass & JS/sass/3-components/_project-card.scss */
+  .project-card__container {
+    border: solid 1rem #307698;
+  }
+}
+
+/* line 47, C:/Users/Yousefs_Dator/Desktop/Projekt/Min portfolio webb sida/Html & Sass & JS/sass/3-components/_project-card.scss */
+.project-card__front, .project-card__back {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+}
+
+/* line 51, C:/Users/Yousefs_Dator/Desktop/Projekt/Min portfolio webb sida/Html & Sass & JS/sass/3-components/_project-card.scss */
+.project-card__back {
+  background-color: #307698;
+  background-image: radial-gradient(circle, #5991ad, #307698 70%);
+  background-size: contain;
+  padding: 2.5rem;
+  text-align: center;
+  transform: rotateY(180deg);
+}
+
+@media only screen and (max-width: 1024px) {
+  /* line 51, C:/Users/Yousefs_Dator/Desktop/Projekt/Min portfolio webb sida/Html & Sass & JS/sass/3-components/_project-card.scss */
+  .project-card__back {
+    top: 0px;
+    right: 0px;
+    left: auto;
+    bottom: auto;
+    width: 50%;
+    height: 100%;
+    transform: rotateX(0deg);
+    text-align: left;
+  }
+}
+
+@media only screen and (max-width: 591px) {
+  /* line 51, C:/Users/Yousefs_Dator/Desktop/Projekt/Min portfolio webb sida/Html & Sass & JS/sass/3-components/_project-card.scss */
+  .project-card__back {
+    width: 100%;
+    height: 50%;
+    top: 50%;
+    left: 0px;
+    text-align: center;
+  }
+}
+
+/* line 86, C:/Users/Yousefs_Dator/Desktop/Projekt/Min portfolio webb sida/Html & Sass & JS/sass/3-components/_project-card.scss */
+.project-card__front {
+  overflow: hidden;
+}
+
+@media only screen and (max-width: 1024px) {
+  /* line 86, C:/Users/Yousefs_Dator/Desktop/Projekt/Min portfolio webb sida/Html & Sass & JS/sass/3-components/_project-card.scss */
+  .project-card__front {
+    top: 0px;
+    right: auto;
+    left: 0px;
+    bottom: auto;
+    width: 50%;
+    height: 100%;
+  }
+}
+
+@media only screen and (max-width: 591px) {
+  /* line 86, C:/Users/Yousefs_Dator/Desktop/Projekt/Min portfolio webb sida/Html & Sass & JS/sass/3-components/_project-card.scss */
+  .project-card__front {
+    width: 100%;
+    height: 50%;
+    top: 0px;
+    left: 0px;
+  }
+}
+
+/* line 107, C:/Users/Yousefs_Dator/Desktop/Projekt/Min portfolio webb sida/Html & Sass & JS/sass/3-components/_project-card.scss */
+.project-card__img {
+  width: 100%;
+}
+
+/* line 111, C:/Users/Yousefs_Dator/Desktop/Projekt/Min portfolio webb sida/Html & Sass & JS/sass/3-components/_project-card.scss */
+.project-card__main-title {
+  font-family: "Oswald", sans-serif;
+  color: #e8e8e8;
+  font-size: 2.5rem;
+  font-weight: bolder;
+  text-transform: capitalize;
+  margin-bottom: 2rem;
+}
+
+/* line 120, C:/Users/Yousefs_Dator/Desktop/Projekt/Min portfolio webb sida/Html & Sass & JS/sass/3-components/_project-card.scss */
+.project-card__sub-title {
+  font-family: "Oswald", sans-serif;
+  color: #cbdde5;
+  font-size: 2.15rem;
+  font-weight: lighter;
+  text-transform: capitalize;
+}
+
+/* line 1, C:/Users/Yousefs_Dator/Desktop/Projekt/Min portfolio webb sida/Html & Sass & JS/sass/3-components/_button.scss */
+.btn {
+  display: inline-block;
+  font-family: "Arvo", serif;
+  text-transform: uppercase;
+  font-weight: lighter;
+  transition: all 300ms ease 0s;
+  margin: auto 1rem;
+  cursor: pointer;
+  user-select: none;
+  letter-spacing: 1.5px;
+  word-spacing: 3px;
+}
+
+/* line 13, C:/Users/Yousefs_Dator/Desktop/Projekt/Min portfolio webb sida/Html & Sass & JS/sass/3-components/_button.scss */
+.btn::before {
+  content: "";
+  position: absolute;
+  top: -2.5px;
+  right: -2.5px;
+  bottom: -2.5px;
+  left: -2.5px;
+  z-index: -1;
+  transform: scale(0);
+}
+
+/* line 20, C:/Users/Yousefs_Dator/Desktop/Projekt/Min portfolio webb sida/Html & Sass & JS/sass/3-components/_button.scss */
+.btn:first-child {
+  margin-left: 0px;
+}
+
+/* line 24, C:/Users/Yousefs_Dator/Desktop/Projekt/Min portfolio webb sida/Html & Sass & JS/sass/3-components/_button.scss */
+.btn:last-child {
+  margin-right: 0px;
+}
+
+/* line 28, C:/Users/Yousefs_Dator/Desktop/Projekt/Min portfolio webb sida/Html & Sass & JS/sass/3-components/_button.scss */
+.btn:hover {
+  transition: all 300ms ease 0s;
+  transform: scale(1.05);
+}
+
+/* line 33, C:/Users/Yousefs_Dator/Desktop/Projekt/Min portfolio webb sida/Html & Sass & JS/sass/3-components/_button.scss */
+.btn:active {
+  transition: all 300ms ease 0s;
+  transform: scale(1.1);
+}
+
+/* line 37, C:/Users/Yousefs_Dator/Desktop/Projekt/Min portfolio webb sida/Html & Sass & JS/sass/3-components/_button.scss */
+.btn:active::before {
+  animation: splash .3s ease 0s 1 normal forwards;
+}
+
+/* line 44, C:/Users/Yousefs_Dator/Desktop/Projekt/Min portfolio webb sida/Html & Sass & JS/sass/3-components/_button.scss */
+.btn--c-sec {
+  background-color: transparent;
+  border: 2.5px solid #e8e8e8;
+  color: #e8e8e8;
+  background-image: linear-gradient(112deg, transparent 0%, transparent 50%, #e8e8e8 50%);
+  background-size: 210%;
+  transition: all 300ms ease 0s;
+  transition-duration: 600ms;
+}
+
+/* line 57, C:/Users/Yousefs_Dator/Desktop/Projekt/Min portfolio webb sida/Html & Sass & JS/sass/3-components/_button.scss */
+.btn--c-sec::before {
+  background-color: #e8e8e8;
+}
+
+/* line 61, C:/Users/Yousefs_Dator/Desktop/Projekt/Min portfolio webb sida/Html & Sass & JS/sass/3-components/_button.scss */
+.btn--c-sec:hover {
+  transition: all 300ms ease 0s;
+  transition-duration: 600ms;
+  color: #112832;
+}
+
+/* line 68, C:/Users/Yousefs_Dator/Desktop/Projekt/Min portfolio webb sida/Html & Sass & JS/sass/3-components/_button.scss */
+.btn--c-prim {
+  background-color: transparent;
+  border: 2.5px solid #112832;
+  color: #112832;
+  background-image: linear-gradient(112deg, transparent 0%, transparent 50%, #112832 50%);
+  background-size: 210%;
+  transition: all 300ms ease 0s;
+  transition-duration: 600ms;
+}
+
+/* line 80, C:/Users/Yousefs_Dator/Desktop/Projekt/Min portfolio webb sida/Html & Sass & JS/sass/3-components/_button.scss */
+.btn--c-prim::before {
+  background-color: #112832;
+}
+
+/* line 84, C:/Users/Yousefs_Dator/Desktop/Projekt/Min portfolio webb sida/Html & Sass & JS/sass/3-components/_button.scss */
+.btn--c-prim:hover {
+  transition: all 300ms ease 0s;
+  transition-duration: 600ms;
+  color: #e8e8e8;
+}
+
+/* line 94, C:/Users/Yousefs_Dator/Desktop/Projekt/Min portfolio webb sida/Html & Sass & JS/sass/3-components/_button.scss */
+.btn--s-lg {
+  padding: 1.5rem 3rem;
+  font-size: 2.2rem;
+}
+
+/* line 97, C:/Users/Yousefs_Dator/Desktop/Projekt/Min portfolio webb sida/Html & Sass & JS/sass/3-components/_button.scss */
+.btn--s-lg:hover {
+  background-position: 100%;
+}
+
+/* line 102, C:/Users/Yousefs_Dator/Desktop/Projekt/Min portfolio webb sida/Html & Sass & JS/sass/3-components/_button.scss */
+.btn--s-md {
+  padding: 1.25rem 2.5rem;
+  font-size: 2rem;
+}
+
+/* line 105, C:/Users/Yousefs_Dator/Desktop/Projekt/Min portfolio webb sida/Html & Sass & JS/sass/3-components/_button.scss */
+.btn--s-md:hover {
+  background-position: 99%;
+}
+
+/* line 110, C:/Users/Yousefs_Dator/Desktop/Projekt/Min portfolio webb sida/Html & Sass & JS/sass/3-components/_button.scss */
+.btn--s-sm {
+  padding: 1rem 2rem;
+  font-size: 1.8rem;
+}
+
+/* line 113, C:/Users/Yousefs_Dator/Desktop/Projekt/Min portfolio webb sida/Html & Sass & JS/sass/3-components/_button.scss */
+.btn--s-sm:hover {
+  background-position: 99%;
+}
+
+/* line 122, C:/Users/Yousefs_Dator/Desktop/Projekt/Min portfolio webb sida/Html & Sass & JS/sass/3-components/_button.scss */
+.btn--fill.btn--c-sec {
+  background-color: #e8e8e8;
+  color: #112832;
+}
+
+/* line 125, C:/Users/Yousefs_Dator/Desktop/Projekt/Min portfolio webb sida/Html & Sass & JS/sass/3-components/_button.scss */
+.btn--fill.btn--c-sec:hover {
+  filter: brightness(75%);
+}
+
+/* line 130, C:/Users/Yousefs_Dator/Desktop/Projekt/Min portfolio webb sida/Html & Sass & JS/sass/3-components/_button.scss */
+.btn--fill.btn--c-prim {
+  background-color: #112832;
+  color: #e8e8e8;
+}
+
+/* line 134, C:/Users/Yousefs_Dator/Desktop/Projekt/Min portfolio webb sida/Html & Sass & JS/sass/3-components/_button.scss */
+.btn--fill.btn--c-prim:hover {
+  filter: brightness(125%);
+}
+
+/* line 141, C:/Users/Yousefs_Dator/Desktop/Projekt/Min portfolio webb sida/Html & Sass & JS/sass/3-components/_button.scss */
+.btn--round {
+  border-radius: 25%/100%;
+}
+
+/* line 144, C:/Users/Yousefs_Dator/Desktop/Projekt/Min portfolio webb sida/Html & Sass & JS/sass/3-components/_button.scss */
+.btn--round::before {
+  border-radius: 25%/100%;
+}
+
+/* line 149, C:/Users/Yousefs_Dator/Desktop/Projekt/Min portfolio webb sida/Html & Sass & JS/sass/3-components/_button.scss */
+.btn--outline {
+  background-image: none;
+  background-image: transparent;
+}
+
+/* line 154, C:/Users/Yousefs_Dator/Desktop/Projekt/Min portfolio webb sida/Html & Sass & JS/sass/3-components/_button.scss */
+.btn--outline.btn--c-sec {
+  color: #e8e8e8;
+}
+
+/* line 158, C:/Users/Yousefs_Dator/Desktop/Projekt/Min portfolio webb sida/Html & Sass & JS/sass/3-components/_button.scss */
+.btn--outline.btn--c-prim {
+  color: #112832;
+}
+
+/* line 10, C:/Users/Yousefs_Dator/Desktop/Projekt/Min portfolio webb sida/Html & Sass & JS/sass/3-components/_text-input.scss */
+.text-input {
+  width: 30rem;
+}
+
+/* line 13, C:/Users/Yousefs_Dator/Desktop/Projekt/Min portfolio webb sida/Html & Sass & JS/sass/3-components/_text-input.scss */
+.text-input__input {
+  width: 100%;
+  padding: 1.15rem 1.25rem;
+  font-family: "Arvo", serif;
+  letter-spacing: 2px;
+  font-size: 2rem;
+  background-color: transparent;
+  background-color: #307698;
+  transition: all 300ms ease 0s;
+  color: #747474;
+}
+
+/* line 24, C:/Users/Yousefs_Dator/Desktop/Projekt/Min portfolio webb sida/Html & Sass & JS/sass/3-components/_text-input.scss */
+.text-input__input::placeholder {
+  user-select: none;
+  transition: all 300ms ease 0s;
+  color: #c4c9cc;
+  font-size: 1.5rem;
+  font-family: "Arvo", serif;
+  text-transform: capitalize;
+  font-weight: lighter;
+  letter-spacing: 3px;
+  word-spacing: 6px;
+}
+
+@media only screen and (max-width: 591px) {
+  /* line 24, C:/Users/Yousefs_Dator/Desktop/Projekt/Min portfolio webb sida/Html & Sass & JS/sass/3-components/_text-input.scss */
+  .text-input__input::placeholder {
+    text-align: center;
+  }
+}
+
+/* line 41, C:/Users/Yousefs_Dator/Desktop/Projekt/Min portfolio webb sida/Html & Sass & JS/sass/3-components/_text-input.scss */
+.text-input__label {
+  position: absolute;
+  top: 50%;
+  left: 0px;
+  transform: translateY(-50%) scale(1);
+  color: #e8e8e8;
+  font-size: 1.5rem;
+  font-family: "Arvo", serif;
+  text-transform: capitalize;
+  font-weight: lighter;
+  letter-spacing: 3px;
+  word-spacing: 6px;
+  margin-left: 1.25rem;
+  transition: all 300ms ease 0s;
+  transform-origin: left;
+  opacity: 0;
+  cursor: text;
+}
+
+/* line 60, C:/Users/Yousefs_Dator/Desktop/Projekt/Min portfolio webb sida/Html & Sass & JS/sass/3-components/_text-input.scss */
+.text-input__input:focus, .text-input__input:valid {
+  transition: all 300ms ease 0s;
+  background-color: #98bbcc;
+}
+
+/* line 64, C:/Users/Yousefs_Dator/Desktop/Projekt/Min portfolio webb sida/Html & Sass & JS/sass/3-components/_text-input.scss */
+.text-input__input:focus::placeholder, .text-input__input:valid::placeholder {
+  transition: all 300ms ease 0s;
+  color: transparent;
+  font-size: 1.5rem;
+  font-family: "Arvo", serif;
+  text-transform: capitalize;
+  font-weight: lighter;
+  letter-spacing: 3px;
+  word-spacing: 6px;
+}
+
+/* line 75, C:/Users/Yousefs_Dator/Desktop/Projekt/Min portfolio webb sida/Html & Sass & JS/sass/3-components/_text-input.scss */
+.text-input__input:focus ~ .text-input__label, .text-input__input:valid ~ .text-input__label {
+  transition: all 300ms ease 0s;
+  transform: translateY(-300%) scale(0.75);
+  color: #747474;
+  opacity: 1;
+}
+
+/* line 4, C:/Users/Yousefs_Dator/Desktop/Projekt/Min portfolio webb sida/Html & Sass & JS/sass/3-components/_text-area.scss */
+.text-area {
+  width: 100%;
+  min-height: 25rem;
+  padding: 2rem 3rem;
+  resize: vertical;
+  background-color: #c6d1d7;
+  font-family: "Arvo", serif;
+  font-weight: lighter;
+  word-spacing: 6px;
+  letter-spacing: 1.5px;
+  color: #747474;
+}
+
+/* line 12, C:/Users/Yousefs_Dator/Desktop/Projekt/Min portfolio webb sida/Html & Sass & JS/sass/3-components/_social.scss */
+.social {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  user-select: none;
+  position: fixed;
+  right: 0px;
+  bottom: 8rem;
+  z-index: 1;
+}
+
+@media only screen and (max-width: 1024px) {
+  /* line 12, C:/Users/Yousefs_Dator/Desktop/Projekt/Min portfolio webb sida/Html & Sass & JS/sass/3-components/_social.scss */
+  .social {
+    display: none;
+  }
+}
+
+/* line 24, C:/Users/Yousefs_Dator/Desktop/Projekt/Min portfolio webb sida/Html & Sass & JS/sass/3-components/_social.scss */
+.social__input {
+  display: none;
+}
+
+/* line 28, C:/Users/Yousefs_Dator/Desktop/Projekt/Min portfolio webb sida/Html & Sass & JS/sass/3-components/_social.scss */
+.social__tg-btn {
+  width: 6.2rem;
+  height: 6.2rem;
+  border-radius: 100%;
+  margin: 1rem 6rem;
+  cursor: pointer;
+  order: 2;
+  transition: all 300ms ease 0s;
+  z-index: 1;
+}
+
+/* line 39, C:/Users/Yousefs_Dator/Desktop/Projekt/Min portfolio webb sida/Html & Sass & JS/sass/3-components/_social.scss */
+.social__tg-btn::after {
+  content: "";
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  background-color: #307698;
+  border-radius: 100%;
+  transform: scale(0);
+  z-index: -1;
+}
+
+/* line 49, C:/Users/Yousefs_Dator/Desktop/Projekt/Min portfolio webb sida/Html & Sass & JS/sass/3-components/_social.scss */
+.social__tg-btn:active::after {
+  animation: splash .35s ease 0s 1 normal forwards;
+  animation-play-state: running;
+}
+
+/* line 58, C:/Users/Yousefs_Dator/Desktop/Projekt/Min portfolio webb sida/Html & Sass & JS/sass/3-components/_social.scss */
+.social__icons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  order: 1;
+  visibility: hidden;
+  z-index: 0;
+}
+
+/* line 67, C:/Users/Yousefs_Dator/Desktop/Projekt/Min portfolio webb sida/Html & Sass & JS/sass/3-components/_social.scss */
+.social__icon {
+  width: 4.3rem;
+  height: 4.3rem;
+  border-radius: 100%;
+  margin: 1.35rem 6rem;
+  opacity: 0;
+  transition: all 300ms ease 0s;
+  transform: translateY(200%);
+}
+
+/* line 79, C:/Users/Yousefs_Dator/Desktop/Projekt/Min portfolio webb sida/Html & Sass & JS/sass/3-components/_social.scss */
+.social__icon:nth-child(1) {
+  transition-delay: 0.1s;
+  z-index: 1;
+}
+
+/* line 79, C:/Users/Yousefs_Dator/Desktop/Projekt/Min portfolio webb sida/Html & Sass & JS/sass/3-components/_social.scss */
+.social__icon:nth-child(2) {
+  transition-delay: 0.2s;
+  z-index: 2;
+}
+
+/* line 79, C:/Users/Yousefs_Dator/Desktop/Projekt/Min portfolio webb sida/Html & Sass & JS/sass/3-components/_social.scss */
+.social__icon:nth-child(3) {
+  transition-delay: 0.3s;
+  z-index: 3;
+}
+
+/* line 79, C:/Users/Yousefs_Dator/Desktop/Projekt/Min portfolio webb sida/Html & Sass & JS/sass/3-components/_social.scss */
+.social__icon:nth-child(4) {
+  transition-delay: 0.4s;
+  z-index: 4;
+}
+
+/* line 85, C:/Users/Yousefs_Dator/Desktop/Projekt/Min portfolio webb sida/Html & Sass & JS/sass/3-components/_social.scss */
+.social__icon::after {
+  content: "";
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  background-color: #307698;
+  border-radius: 100%;
+  transform: scale(0);
+  z-index: -1;
+}
+
+/* line 95, C:/Users/Yousefs_Dator/Desktop/Projekt/Min portfolio webb sida/Html & Sass & JS/sass/3-components/_social.scss */
+.social__icon:active::after {
+  animation: splash .35s ease 0s 1 normal forwards;
+  animation-play-state: running;
+}
+
+/* line 102, C:/Users/Yousefs_Dator/Desktop/Projekt/Min portfolio webb sida/Html & Sass & JS/sass/3-components/_social.scss */
+.social__tg-btn, .social__icon {
+  background-color: #307698;
+  background-image: radial-gradient(circle, #5991ad 0%, #307698);
+  background-size: contain;
+  background-position: center;
+}
+
+/* line 113, C:/Users/Yousefs_Dator/Desktop/Projekt/Min portfolio webb sida/Html & Sass & JS/sass/3-components/_social.scss */
+.social__img {
+  display: block;
+  width: 50%;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  margin: auto;
+  filter: invert(90%);
+}
+
+/* line 130, C:/Users/Yousefs_Dator/Desktop/Projekt/Min portfolio webb sida/Html & Sass & JS/sass/3-components/_social.scss */
+.social__input:checked ~ .social__icons {
+  visibility: visible;
+}
+
+/* line 133, C:/Users/Yousefs_Dator/Desktop/Projekt/Min portfolio webb sida/Html & Sass & JS/sass/3-components/_social.scss */
+.social__input:checked ~ .social__icons .social__icon {
+  transition: all 300ms ease 0s;
+  opacity: 1;
+  transform: translateY(0%);
+}
+
+/* line 140, C:/Users/Yousefs_Dator/Desktop/Projekt/Min portfolio webb sida/Html & Sass & JS/sass/3-components/_social.scss */
+.social__input:checked ~ .social__icons .social__icon:nth-child(1) {
+  transition-delay: 0.4s;
+}
+
+/* line 140, C:/Users/Yousefs_Dator/Desktop/Projekt/Min portfolio webb sida/Html & Sass & JS/sass/3-components/_social.scss */
+.social__input:checked ~ .social__icons .social__icon:nth-child(2) {
+  transition-delay: 0.3s;
+}
+
+/* line 140, C:/Users/Yousefs_Dator/Desktop/Projekt/Min portfolio webb sida/Html & Sass & JS/sass/3-components/_social.scss */
+.social__input:checked ~ .social__icons .social__icon:nth-child(3) {
+  transition-delay: 0.2s;
+}
+
+/* line 140, C:/Users/Yousefs_Dator/Desktop/Projekt/Min portfolio webb sida/Html & Sass & JS/sass/3-components/_social.scss */
+.social__input:checked ~ .social__icons .social__icon:nth-child(4) {
+  transition-delay: 0.1s;
+}
+
+/* line 4, C:/Users/Yousefs_Dator/Desktop/Projekt/Min portfolio webb sida/Html & Sass & JS/sass/4-layouts/_2-navbar.scss */
+.nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  user-select: none;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  z-index: 1;
+}
+
+@media only screen and (max-width: 1024px) {
+  /* line 4, C:/Users/Yousefs_Dator/Desktop/Projekt/Min portfolio webb sida/Html & Sass & JS/sass/4-layouts/_2-navbar.scss */
+  .nav {
+    display: none;
+  }
+}
+
+/* line 19, C:/Users/Yousefs_Dator/Desktop/Projekt/Min portfolio webb sida/Html & Sass & JS/sass/4-layouts/_2-navbar.scss */
+.nav::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #2e414b;
+}
+
+/* line 27, C:/Users/Yousefs_Dator/Desktop/Projekt/Min portfolio webb sida/Html & Sass & JS/sass/4-layouts/_2-navbar.scss */
+.nav__list {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+}
+
+/* line 34, C:/Users/Yousefs_Dator/Desktop/Projekt/Min portfolio webb sida/Html & Sass & JS/sass/4-layouts/_2-navbar.scss */
+.nav__item::before {
+  content: "";
+  position: absolute;
+  right: 1rem;
+  bottom: 1rem;
+  left: 1rem;
+  height: 0.5rem;
+  background-color: #e8e8e8;
+  transform: scaleX(0);
+  transition: all 300ms ease 0s;
+}
+
+/* line 44, C:/Users/Yousefs_Dator/Desktop/Projekt/Min portfolio webb sida/Html & Sass & JS/sass/4-layouts/_2-navbar.scss */
+.nav__item:hover::before {
+  transition: all 300ms ease 0s;
+  transform: scaleX(1);
+}
+
+/* line 51, C:/Users/Yousefs_Dator/Desktop/Projekt/Min portfolio webb sida/Html & Sass & JS/sass/4-layouts/_2-navbar.scss */
+.nav__link {
+  font-family: "Oswald", sans-serif;
+  font-size: 2.2rem;
+  padding: 3rem 2rem;
+  word-spacing: 4px;
+  letter-spacing: 2px;
+  color: #e8e8e8;
+  transform-origin: bottom;
+  transition: all 300ms ease 0s;
+}
+
+/* line 61, C:/Users/Yousefs_Dator/Desktop/Projekt/Min portfolio webb sida/Html & Sass & JS/sass/4-layouts/_2-navbar.scss */
+.nav__link::first-letter {
+  text-transform: capitalize;
+}
+
+/* line 66, C:/Users/Yousefs_Dator/Desktop/Projekt/Min portfolio webb sida/Html & Sass & JS/sass/4-layouts/_2-navbar.scss */
+.nav__item:hover .nav__link {
+  transition: all 300ms ease 0s;
+  transform: scale(1.1) translateY(-0.5rem);
+}
+
+/* line 6, C:/Users/Yousefs_Dator/Desktop/Projekt/Min portfolio webb sida/Html & Sass & JS/sass/4-layouts/_3-sidebar.scss */
+.sidebar {
+  position: static;
+}
+
+@media only screen and (min-width: 1488px) {
+  /* line 6, C:/Users/Yousefs_Dator/Desktop/Projekt/Min portfolio webb sida/Html & Sass & JS/sass/4-layouts/_3-sidebar.scss */
+  .sidebar {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 1488px) {
+  /* line 6, C:/Users/Yousefs_Dator/Desktop/Projekt/Min portfolio webb sida/Html & Sass & JS/sass/4-layouts/_3-sidebar.scss */
+  .sidebar {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  /* line 6, C:/Users/Yousefs_Dator/Desktop/Projekt/Min portfolio webb sida/Html & Sass & JS/sass/4-layouts/_3-sidebar.scss */
+  .sidebar {
+    display: block;
+  }
+}
+
+/* line 21, C:/Users/Yousefs_Dator/Desktop/Projekt/Min portfolio webb sida/Html & Sass & JS/sass/4-layouts/_3-sidebar.scss */
+.sidebar__header {
+  padding: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  z-index: 3;
+  padding-right: 3rem;
+}
+
+/* line 22, C:/Users/Yousefs_Dator/Desktop/Projekt/Min portfolio webb sida/Html & Sass & JS/sass/4-layouts/_3-sidebar.scss */
+.sidebar__header::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  background-color: #2e414b;
+}
+
+@media only screen and (max-width: 591px) {
+  /* line 21, C:/Users/Yousefs_Dator/Desktop/Projekt/Min portfolio webb sida/Html & Sass & JS/sass/4-layouts/_3-sidebar.scss */
+  .sidebar__header {
+    bottom: 0px;
+    top: auto;
+    padding: 1rem;
+  }
+}
+
+@media screen and (max-height: 591px) {
+  /* line 21, C:/Users/Yousefs_Dator/Desktop/Projekt/Min portfolio webb sida/Html & Sass & JS/sass/4-layouts/_3-sidebar.scss */
+  .sidebar__header {
+    bottom: 0px;
+    top: auto;
+    padding: 1rem;
+  }
+}
+
+/* line 49, C:/Users/Yousefs_Dator/Desktop/Projekt/Min portfolio webb sida/Html & Sass & JS/sass/4-layouts/_3-sidebar.scss */
+.sidebar__tg-btn {
+  display: block;
+  width: 5rem;
+  height: 5rem;
+  margin: auto;
+  cursor: pointer;
+}
+
+/* line 56, C:/Users/Yousefs_Dator/Desktop/Projekt/Min portfolio webb sida/Html & Sass & JS/sass/4-layouts/_3-sidebar.scss */
+.sidebar__tg-btn-elem {
+  height: 4px;
+  width: 5rem;
+  margin: auto;
+  margin-top: 1rem;
+  background-color: #e8e8e8;
+}
+
+@media only screen and (max-width: 591px) {
+  /* line 56, C:/Users/Yousefs_Dator/Desktop/Projekt/Min portfolio webb sida/Html & Sass & JS/sass/4-layouts/_3-sidebar.scss */
+  .sidebar__tg-btn-elem {
+    height: 3px;
+    width: 4rem;
+    margin-top: .75rem;
+  }
+}
+
+/* line 69, C:/Users/Yousefs_Dator/Desktop/Projekt/Min portfolio webb sida/Html & Sass & JS/sass/4-layouts/_3-sidebar.scss */
+.sidebar__tg-btn-elem:first-child {
+  margin-top: 0px;
+}
+
+/* line 75, C:/Users/Yousefs_Dator/Desktop/Projekt/Min portfolio webb sida/Html & Sass & JS/sass/4-layouts/_3-sidebar.scss */
+.sidebar__input {
+  display: block;
+  position: fixed;
+  z-index: 200;
+}
+
+/* line 81, C:/Users/Yousefs_Dator/Desktop/Projekt/Min portfolio webb sida/Html & Sass & JS/sass/4-layouts/_3-sidebar.scss */
+.sidebar__footer {
+  position: fixed;
+  top: 10rem;
+  right: 0px;
+  bottom: 0px;
+  z-index: 2;
+  box-shadow: 0px 0px 0px 1000vh transparent;
+  width: 30rem;
+  transform: translateX(100%);
+  transition: all 300ms ease 0s;
+  transition-duration: .7s;
+  overflow-y: auto;
+}
+
+/* line 85, C:/Users/Yousefs_Dator/Desktop/Projekt/Min portfolio webb sida/Html & Sass & JS/sass/4-layouts/_3-sidebar.scss */
+.sidebar__footer::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  height: 150%;
+  width: 100%;
+  background-color: #194860;
+  background-image: linear-gradient(90deg, #194860, #3c6378);
+}
+
+@media only screen and (max-width: 591px) {
+  /* line 81, C:/Users/Yousefs_Dator/Desktop/Projekt/Min portfolio webb sida/Html & Sass & JS/sass/4-layouts/_3-sidebar.scss */
+  .sidebar__footer {
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    bottom: 6.9rem;
+    left: 0px;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+}
+
+@media screen and (max-height: 591px) {
+  /* line 81, C:/Users/Yousefs_Dator/Desktop/Projekt/Min portfolio webb sida/Html & Sass & JS/sass/4-layouts/_3-sidebar.scss */
+  .sidebar__footer {
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    bottom: 6.9rem;
+    left: 0px;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    overflow-y: hidden;
+  }
+}
+
+/* line 129, C:/Users/Yousefs_Dator/Desktop/Projekt/Min portfolio webb sida/Html & Sass & JS/sass/4-layouts/_3-sidebar.scss */
+.sidebar__link {
+  font-family: "Oswald", sans-serif;
+  font-size: 2.2rem;
+  padding: 4.5rem 6rem;
+  word-spacing: 4px;
+  letter-spacing: 2px;
+  color: #e8e8e8;
+  text-align: center;
+}
+
+/* line 138, C:/Users/Yousefs_Dator/Desktop/Projekt/Min portfolio webb sida/Html & Sass & JS/sass/4-layouts/_3-sidebar.scss */
+.sidebar__link::first-letter {
+  text-transform: capitalize;
+}
+
+@media only screen and (max-width: 591px) {
+  /* line 129, C:/Users/Yousefs_Dator/Desktop/Projekt/Min portfolio webb sida/Html & Sass & JS/sass/4-layouts/_3-sidebar.scss */
+  .sidebar__link {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+}
+
+@media screen and (max-height: 591px) {
+  /* line 129, C:/Users/Yousefs_Dator/Desktop/Projekt/Min portfolio webb sida/Html & Sass & JS/sass/4-layouts/_3-sidebar.scss */
+  .sidebar__link {
+    padding-top: 1.3rem;
+    padding-bottom: 1.3rem;
+  }
+}
+
+/* line 154, C:/Users/Yousefs_Dator/Desktop/Projekt/Min portfolio webb sida/Html & Sass & JS/sass/4-layouts/_3-sidebar.scss */
+.sidebar__active::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  width: 4px;
+  margin: 1rem 2rem;
+  background-color: #e8e8e8;
+}
+
+@media only screen and (max-width: 591px) {
+  /* line 154, C:/Users/Yousefs_Dator/Desktop/Projekt/Min portfolio webb sida/Html & Sass & JS/sass/4-layouts/_3-sidebar.scss */
+  .sidebar__active::before {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    height: 4px;
+    width: 80%;
+    margin: auto;
+    margin-bottom: 0px;
+  }
+}
+
+@media screen and (max-height: 591px) {
+  /* line 154, C:/Users/Yousefs_Dator/Desktop/Projekt/Min portfolio webb sida/Html & Sass & JS/sass/4-layouts/_3-sidebar.scss */
+  .sidebar__active::before {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    height: 4px;
+    width: 80%;
+    margin: auto;
+    margin-bottom: 0px;
+  }
+}
+
+/* line 179, C:/Users/Yousefs_Dator/Desktop/Projekt/Min portfolio webb sida/Html & Sass & JS/sass/4-layouts/_3-sidebar.scss */
+.sidebar__img-box {
+  width: 6rem;
+  height: 6rem;
+  margin: 2rem 0px;
+}
+
+@media only screen and (max-width: 591px) {
+  /* line 179, C:/Users/Yousefs_Dator/Desktop/Projekt/Min portfolio webb sida/Html & Sass & JS/sass/4-layouts/_3-sidebar.scss */
+  .sidebar__img-box {
+    width: 4rem;
+    height: 4rem;
+    margin: 1.25rem 2.5rem;
+  }
+}
+
+@media screen and (max-height: 591px) {
+  /* line 179, C:/Users/Yousefs_Dator/Desktop/Projekt/Min portfolio webb sida/Html & Sass & JS/sass/4-layouts/_3-sidebar.scss */
+  .sidebar__img-box {
+    width: 4rem;
+    height: 4rem;
+    margin: 1.25rem 2.5rem;
+  }
+}
+
+/* line 197, C:/Users/Yousefs_Dator/Desktop/Projekt/Min portfolio webb sida/Html & Sass & JS/sass/4-layouts/_3-sidebar.scss */
+.sidebar__img {
+  display: block;
+  margin: auto;
+  width: auto;
+  filter: invert(100%);
+}
+
+/* line 207, C:/Users/Yousefs_Dator/Desktop/Projekt/Min portfolio webb sida/Html & Sass & JS/sass/4-layouts/_3-sidebar.scss */
+.sidebar__social {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+@media only screen and (max-width: 591px) {
+  /* line 207, C:/Users/Yousefs_Dator/Desktop/Projekt/Min portfolio webb sida/Html & Sass & JS/sass/4-layouts/_3-sidebar.scss */
+  .sidebar__social {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 3.5rem;
+    margin-bottom: 2rem;
+  }
+}
+
+@media screen and (max-height: 591px) {
+  /* line 207, C:/Users/Yousefs_Dator/Desktop/Projekt/Min portfolio webb sida/Html & Sass & JS/sass/4-layouts/_3-sidebar.scss */
+  .sidebar__social {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 3.5rem;
+    margin-bottom: 3rem;
+  }
+}
+
+/* line 230, C:/Users/Yousefs_Dator/Desktop/Projekt/Min portfolio webb sida/Html & Sass & JS/sass/4-layouts/_3-sidebar.scss */
+.sidebar__input:checked + .sidebar__footer {
+  transform: translateX(0px);
+  transition: all 300ms ease 0s;
+  transition-duration: .7s;
+  box-shadow: 0px 0px 0px 1000vh rgba(0, 0, 0, 0.7);
+}
+
+/* line 1, C:/Users/Yousefs_Dator/Desktop/Projekt/Min portfolio webb sida/Html & Sass & JS/sass/4-layouts/_4-projects.scss */
+.l-projects {
+  --grid-item-width: 35rem;
+  --grid-gap: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, var(--grid-item-width));
+  align-items: center;
+  justify-content: center;
+  grid-gap: var(--grid-gap);
+  justify-items: center;
+  perspective: 1000px;
+}
+
+@media only screen and (max-width: 1024px) {
+  /* line 1, C:/Users/Yousefs_Dator/Desktop/Projekt/Min portfolio webb sida/Html & Sass & JS/sass/4-layouts/_4-projects.scss */
+  .l-projects {
+    --grid-item-width: 51em;
+  }
+}
+
+@media only screen and (max-width: 591px) {
+  /* line 1, C:/Users/Yousefs_Dator/Desktop/Projekt/Min portfolio webb sida/Html & Sass & JS/sass/4-layouts/_4-projects.scss */
+  .l-projects {
+    display: block;
+  }
+}
+
+/* line 1, C:/Users/Yousefs_Dator/Desktop/Projekt/Min portfolio webb sida/Html & Sass & JS/sass/4-layouts/_5-form.scss */
+.form {
+  width: 100%;
+  max-width: 700px;
+  margin: auto;
+  padding-bottom: 80;
+}
+
+/* line 7, C:/Users/Yousefs_Dator/Desktop/Projekt/Min portfolio webb sida/Html & Sass & JS/sass/4-layouts/_5-form.scss */
+.form__container {
+  display: grid;
+  grid-template-areas: "name email btn";
+  align-items: center;
+  justify-content: stretch;
+  grid-gap: 1rem;
+}
+
+@media only screen and (max-width: 1024px) {
+  /* line 7, C:/Users/Yousefs_Dator/Desktop/Projekt/Min portfolio webb sida/Html & Sass & JS/sass/4-layouts/_5-form.scss */
+  .form__container {
+    grid-template-areas: "btn btn" "name email";
+    grid-row-gap: 4rem;
+  }
+}
+
+@media only screen and (max-width: 591px) {
+  /* line 7, C:/Users/Yousefs_Dator/Desktop/Projekt/Min portfolio webb sida/Html & Sass & JS/sass/4-layouts/_5-form.scss */
+  .form__container {
+    grid-template-areas: "btn" "name" "email";
+    grid-row-gap: 4rem;
+  }
+}
+
+/* line 31, C:/Users/Yousefs_Dator/Desktop/Projekt/Min portfolio webb sida/Html & Sass & JS/sass/4-layouts/_5-form.scss */
+.form__name {
+  grid-area: name;
+  width: auto;
+}
+
+/* line 36, C:/Users/Yousefs_Dator/Desktop/Projekt/Min portfolio webb sida/Html & Sass & JS/sass/4-layouts/_5-form.scss */
+.form__email {
+  grid-area: email;
+  width: auto;
+}
+
+/* line 41, C:/Users/Yousefs_Dator/Desktop/Projekt/Min portfolio webb sida/Html & Sass & JS/sass/4-layouts/_5-form.scss */
+.form__btn {
+  display: block;
+  width: auto;
+  grid-area: btn;
+  margin: 0px;
+}
+
+/* line 4, C:/Users/Yousefs_Dator/Desktop/Projekt/Min portfolio webb sida/Html & Sass & JS/sass/4-layouts/_6-footer.scss */
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: -1;
+  user-select: all;
+}
+
+/* line 11, C:/Users/Yousefs_Dator/Desktop/Projekt/Min portfolio webb sida/Html & Sass & JS/sass/4-layouts/_6-footer.scss */
+.footer::after {
+  content: "";
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  background-color: #112832;
+  background-image: linear-gradient(90deg, #112832 5%, #293e47 15%, #293e47 85%, #112832 95%);
+  z-index: -1;
+}
+
+/* line 28, C:/Users/Yousefs_Dator/Desktop/Projekt/Min portfolio webb sida/Html & Sass & JS/sass/4-layouts/_6-footer.scss */
+.footer__flex-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* line 34, C:/Users/Yousefs_Dator/Desktop/Projekt/Min portfolio webb sida/Html & Sass & JS/sass/4-layouts/_6-footer.scss */
+.footer__text {
+  color: #f2f2f2;
+  text-transform: uppercase;
+  font-family: "Oswald", sans-serif;
+  font-size: 1.8rem;
+  letter-spacing: 3px;
+  padding: 1.5rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  cursor: text;
+}
+
+/* line 46, C:/Users/Yousefs_Dator/Desktop/Projekt/Min portfolio webb sida/Html & Sass & JS/sass/4-layouts/_6-footer.scss */
+.footer__text:not(:last-child)::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  right: -0.2rem;
+  bottom: 0px;
+  left: 100%;
+  transform: translateX(-50%);
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
+  background-color: #f2f2f2;
+}
+
+/*# sourceMappingURL=../main.map */

@@ -1,0 +1,72 @@
+//main defualt colors
+$colors: (
+    1-primary: #112D32,
+    2-secondary: #E8E8E8,
+    3-tertiary: #F2F2F2,
+    4-quaternary: #308798,
+    5-quinary: #2e464b,
+    6-senary: #195460,
+);
+
+//adjust hsl values of all colors on webiste
+$global-color-adjust: (
+    hue: 10%,
+    darken: 0%,
+    lighten: 0%,
+    saturate: 0%,
+    desaturate: 0%
+);
+
+//adjust hsl values of the primary color
+$primary-adjust: (
+    hue: 0%,
+    darken: 0%,
+    lighten: 0%,
+    saturate: 0%,
+    desaturate: 0%
+);
+
+//adjust hsl values of the secondary color
+$secondary-adjust: (
+    hue: 0%,
+    darken: 0%,
+    lighten: 0%,
+    saturate: 0%,
+    desaturate: 0%
+);
+
+//adjust hsl values of the tertiary color
+$tertiary-adjust: (
+    hue: 0%,
+    darken: 0%,
+    lighten: 0%,
+    saturate: 0%,
+    desaturate: 0%
+);
+
+//adjust hsl values of the quaternary color
+$quaternary-adjust: (
+    hue: 0%,
+    darken: 0%,
+    lighten: 0%,
+    saturate: 0%,
+    desaturate: 0%
+);
+
+//adjust hsl values of the quinary color
+$quinary-adjust: (
+    hue: 0%,
+    darken: 0%,
+    lighten: 0%,
+    saturate: 0%,
+    desaturate: 0%
+);
+
+//adjust hsl values of the senary color
+$senary-adjust: (
+    hue: 0%,
+    darken: 0%,
+    lighten: 0%,
+    saturate: 0%,
+    desaturate: 0%
+);

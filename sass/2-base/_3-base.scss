@@ -1,0 +1,42 @@
+:root {
+    @include media-break-point(desktop-large) {
+        font-size: 90%;
+    };
+
+    @include media-break-point(desktop) {
+        font-size: 62.5%;
+    };
+
+    @include media-break-point(tablet) {
+        font-size: 50%;
+    };
+
+    /* 
+    @include media-break-point(mobile) {
+        font-size: 50%;
+    }; 
+    */
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+*, *::before, *::after {
+    position: relative;
+    box-sizing: border-box;
+    backface-visibility: hidden;
+}
+
+input, button, textarea {
+    border: none;
+    outline: none;
+}
+
+input, label, button, a, textarea {
+    display: block;
+    display: block;
+    margin: 0px;
+    padding: 0px;
+}

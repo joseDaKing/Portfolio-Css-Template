@@ -1,0 +1,43 @@
+$primary: map-get($section, primary);
+$secondary: map-get($section, secondary);
+$tertiary: map-get($section, tertiary);
+
+.section {
+    padding-bottom: 5rem;
+    padding-top: 12rem;
+    padding-left: 15rem;
+    padding-right: 15rem;
+
+    z-index: 0;
+
+    @include media-break-point(tablet) {
+        padding-left: 3rem;
+        padding-right: 3rem;
+        padding-top: 18rem;
+    };
+
+    @include media-break-point(mobile) {
+        padding-left: 1.7rem;
+        padding-right: 1.7rem;
+        padding-top: 7rem;
+    };
+
+    &--color {
+        &-primary {
+            background-color: $primary;
+            @include gradient(radial, circle, 
+                                is-light($primary, 
+                                    tint($primary, 10%), 
+                                    shade($primary, 10%)), 
+                                $primary 70%);   
+        }
+
+        &-secondary {
+            background-color: $secondary;
+        }
+
+        &-tertiary {
+            background-color: $tertiary;
+        }
+    }
+}

@@ -1,0 +1,133 @@
+$title-color: map-get($skill-card, title-color);
+$sub-title-color: map-get($skill-card, sub-title-color);
+$underline-color: map-get($skill-card, underline-color);
+
+.skill-container {
+    display: grid;
+    grid-template-areas: "one two three";
+    justify-items: center;
+
+    @include media-break(max, 1150px) {
+        grid-template-areas: 
+            "one two"
+            "three three";
+        justify-items: center;
+        justify-content: stretch;
+    };
+
+    @include media-break-point(tablet) {
+        grid-template-areas:
+            "one"
+            "two"
+            "three";
+        
+        text-align: center;
+    };
+}
+
+.skill-card {
+    width: 100%;
+    max-width: 27rem;
+    padding: 1rem;
+
+    @include media-break(max, 1150px) {
+        max-width: 100%;
+        padding: 0px 4rem;
+    }
+
+    @include media-break-point(tablet) {
+        padding: 0px 2rem;
+        margin-bottom: 12rem;
+    };
+
+    &__img-box {
+        width: 100%;
+        max-width: 16rem;
+        margin: auto;
+        margin-bottom: 6rem;
+    }
+
+    &__img {
+        width: 100%;
+        margin: auto;
+
+        @if(map-get($skill-card, is-logo-light)) {
+            filter: invert(100%);
+        }
+    }
+
+    &__title {
+        font-family: $oswald-ff;
+        text-transform: uppercase;
+        font-size: 2.5rem;
+        word-spacing: 3px;
+        letter-spacing: 1px;
+        text-align: center;
+        color: $title-color;
+        
+        &::before {
+            content: "";
+            @include position(absolute, null 0px -2rem 0px);
+            height: 0.3rem;
+            background-color: $underline-color;
+        }
+    }
+
+    &__header {
+        margin-bottom: 3.5rem;
+    }
+
+    &__footer {
+        margin-bottom: 3rem; 
+    }
+
+    &__sub-title {
+        font-size: 2rem;
+        font-family: $oswald-ff;
+        word-spacing: 2px;
+        letter-spacing: 1px;
+        color: $sub-title-color;
+        text-transform: capitalize;
+
+        &:not(:last-child) {
+            margin-bottom: 2rem;
+        }
+    }
+
+    &__section {
+        &:not(:last-child) {
+            margin-bottom: 4rem;
+        }
+    }
+
+    &__link {
+        line-height: 3rem;
+
+        &::after {
+            content: ",";
+            display: block;
+            @include position(absolute, null -0.2rem -.7rem null);
+        }
+
+        &:last-child::after {
+            content: "."; 
+            right: -0.35rem;
+        }
+
+        &:not(:last-child) {
+            margin-right: 1rem;
+        }
+    }
+
+    &__1 {
+        grid-area: one;
+    }
+
+    &__2 {
+        grid-area: two;
+    }
+
+    &__3 {
+        grid-area: three;
+    }
+}

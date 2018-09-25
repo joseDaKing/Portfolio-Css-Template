@@ -1,0 +1,54 @@
+.u-container {
+    width: 100%;
+    max-width: 95rem;
+    margin: auto;
+}
+
+.u-margin {
+    &-auto {
+        margin: auto;
+    }
+
+    &-sm {
+        &-top {
+            margin-top: map-get($u-margin, sm);
+        }
+
+        &-bottom {
+            margin-bottom: map-get($u-margin, sm);
+        }
+    }
+
+    &-md {
+        &-top {
+            margin-top: map-get($u-margin, md);
+        }
+
+        &-bottom {
+            margin-bottom: map-get($u-margin, md);
+        }
+    }
+
+    &-lg {
+        &-top {
+            margin-top: map-get($u-margin, lg);
+        }
+
+        &-bottom {
+            margin-bottom: map-get($u-margin, lg);
+        }
+
+    }
+}
+
+.u-text {
+    &-align {
+        &-center {
+            text-align: center;
+        }
+
+        &-left {
+            text-align: left;
+        }
+    }
+}

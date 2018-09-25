@@ -1,0 +1,21 @@
+.l-projects {
+    --grid-item-width: 35rem;
+    --grid-gap: 2rem;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, var(--grid-item-width));
+    align-items: center;
+    justify-content: center;
+    grid-gap: var(--grid-gap);
+
+    justify-items: center;
+    perspective: 1000px;
+
+    @include media-break-point(tablet) {
+        --grid-item-width: 51em;
+    };
+
+    @include media-break-point(mobile) {
+        display: block;
+    };
+}

@@ -1,0 +1,30 @@
+@function color-adjust($adjust, $color) {
+    $hue: map-get($adjust, hue);
+    $darken: map-get($adjust, darken);
+    $lighten: map-get($adjust, lighten);
+    $saturate: map-get($adjust, saturate);
+    $desaturate: map-get($adjust, desaturate);
+    $color: map-get($colors, $color);
+    
+    @return desaturate(saturate(tint(shade(adjust-hue($color, $hue), $darken), $lighten), $saturate), $desaturate);
+}
+
+@function color-adjust-global($color) {
+    $hue: map-get($global-color-adjust, hue);
+    $darken: map-get($global-color-adjust, darken);
+    $lighten: map-get($global-color-adjust, lighten);
+    $saturate: map-get($global-color-adjust, saturate);
+    $desaturate: map-get($global-color-adjust, desaturate);
+
+    @return desaturate(saturate(tint(shade(adjust-hue($color, $hue), $darken), $lighten), $saturate), $desaturate);
+}
+
+@function is-light($lightness, $light-color, $dark-color) {
+    @if lightness($lightness) < 50 {
+        @return $light-color;
+    }
+
+    @else {
+        @return $dark-color;
+    }
+}

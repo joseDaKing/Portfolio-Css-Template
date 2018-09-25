@@ -1,0 +1,47 @@
+.form {
+    width: 100%;
+    max-width: 700px;
+    margin: auto;
+    padding-bottom: 80;
+
+    &__container {
+        display: grid;
+        grid-template-areas: "name email btn";
+
+        align-items: center;
+        justify-content: stretch;
+        grid-gap: 1rem;
+
+        @include media-break-point(tablet) {
+            grid-template-areas: 
+                "btn btn"
+                "name email";
+            grid-row-gap: 4rem;
+        };
+
+        @include media-break-point(mobile) {
+            grid-template-areas: 
+                "btn"
+                "name"
+                "email";
+            grid-row-gap: 4rem;
+        };
+    }
+
+    &__name {
+        grid-area: name;
+        width: auto;
+    }
+
+    &__email {
+        grid-area: email;
+        width: auto;
+    }
+
+    &__btn {
+        display: block;
+        width: auto;
+        grid-area: btn;
+        margin: 0px;
+    }
+}

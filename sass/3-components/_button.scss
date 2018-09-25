@@ -1,0 +1,163 @@
+.btn {
+    display: inline-block;
+    font-family: $arvo-ff;
+    text-transform: uppercase;
+    font-weight: lighter;
+    transition: $ts;
+    margin: auto 1rem;
+    cursor: pointer;
+    user-select: none;
+    letter-spacing: 1.5px;
+    word-spacing: 3px;
+
+    &::before {
+        content: "";
+        @include position(absolute, -2.5px -2.5px -2.5px -2.5px);
+        z-index: -1;
+        transform: scale(0);
+    }
+    
+    &:first-child {
+        margin-left: 0px;
+    }
+
+    &:last-child {
+        margin-right: 0px;
+    }
+
+    &:hover {
+        transition: $ts;
+        transform: scale(1.05);
+    }
+
+    &:active {
+        transition: $ts;
+        transform: scale(1.1);
+
+        &::before {
+            animation: splash .3s ease 0s 1 normal forwards;
+        }
+    }
+
+    //colors
+    &--c {
+        &-sec {
+            background-color: transparent;
+            border: 2.5px solid map-get($button, secondary-color);
+            color: map-get($button, secondary-color);
+            background-image: 
+                linear-gradient(112deg,  
+                    transparent 0%, 
+                    transparent 50%, 
+                    map-get($button, secondary-color) 50%);
+            background-size: 210%;
+            transition: $ts;
+            transition-duration: 600ms;
+
+            &::before {
+                background-color: map-get($button, secondary-color);
+            }
+    
+            &:hover {
+                transition: $ts;
+                transition-duration: 600ms;
+                color: map-get($button, secondary-hover-color);
+            }
+        }
+
+        &-prim {
+            background-color: transparent;
+            border: 2.5px solid map-get($button, primary-color);
+            color: map-get($button, primary-color);
+            background-image: 
+                linear-gradient(112deg,  
+                    transparent 0%, 
+                    transparent 50%, 
+                    map-get($button, primary-color) 50%);
+            background-size: 210%;
+            transition: $ts;
+            transition-duration: 600ms;
+            &::before {
+                background-color: map-get($button, primary-color);
+            }
+    
+            &:hover {
+                transition: $ts;
+                transition-duration: 600ms;
+                color: map-get($button, primary-hover-color);
+            }
+        }
+    }
+
+    //sizes
+    &--s {
+        &-lg {
+            padding: map-get($button, size-lg-padding);
+            font-size: map-get($button, size-lg-font-size);
+            &:hover {
+                background-position: 100%;
+            }
+        }
+
+        &-md {
+            padding: map-get($button, size-md-padding);
+            font-size: map-get($button, size-md-font-size);
+            &:hover {
+                background-position: 99%;
+            }
+        }
+
+        &-sm {
+            padding: map-get($button, size-sm-padding);
+            font-size: map-get($button, size-sm-font-size);
+            &:hover {
+                background-position: 99%;
+            }
+        }
+    }
+
+    //diffrent types
+    &--fill {
+        &.btn--c {
+            &-sec {
+                background-color: map-get($button, secondary-color);
+                color: map-get($button, secondary-hover-color);
+                &:hover {
+                    filter: brightness(75%);
+                }  
+            }
+            
+            &-prim {
+                background-color: map-get($button, primary-color);
+                color: map-get($button, primary-hover-color);
+                
+                &:hover {
+                    filter: brightness(125%);
+                }   
+            }
+        }
+    }
+
+    &--round {
+        border-radius: 25%/100%;
+        
+        &::before {
+            border-radius: 25%/100%;
+        }
+    }
+
+    &--outline {
+        background-image: none;
+        background-image: transparent;
+
+        &.btn--c {
+            &-sec {
+                color: map-get($button, secondary-color);
+            }
+
+            &-prim {
+                color: map-get($button, primary-color);
+            }
+        }
+    }
+}

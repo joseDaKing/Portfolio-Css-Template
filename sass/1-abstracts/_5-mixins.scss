@@ -1,0 +1,54 @@
+//media queries
+@mixin media-break ($max-min, $value) {
+    @media only screen and (#{$max-min}-width: #{$value} ) {
+        @content;
+    }
+};
+
+@mixin media-break-point ($type) {
+    @if $type == desktop-large {
+        @include media-break(min, map-get($media-break-point, desktop)) {
+            @content;
+        }
+    }
+
+    @if $type == desktop {
+        @include media-break(max, map-get($media-break-point, desktop)) {
+            @content;
+        }
+    }
+
+    @if $type == tablet {
+        @include media-break(max, map-get($media-break-point, tablet)) {
+            @content;
+        }
+    }
+
+    @if $type == mobile {
+        @include media-break(max, map-get($media-break-point, mobile)) {
+            @content;
+        }
+    }
+
+    @if $type == mobile-h {
+        @media screen and (max-height: #{map-get($media-break-point, mobile)}){
+            @content;
+        }
+    }
+
+    @if $type == touch {
+        @media only screen and (hover: hover) {
+            @content;
+        }
+    }
+};
+
+@mixin gradient ($type, $shape, $colors...) {
+    @if($type == linear) {
+        background-image: linear-gradient($shape, $colors);
+    }
+
+    @if($type == radial) {
+        background-image: radial-gradient($shape, $colors);
+    }
+};

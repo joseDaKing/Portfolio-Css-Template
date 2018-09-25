@@ -1,0 +1,180 @@
+
+
+//colors    
+$colors-adjusted: (
+    1-primary: color-adjust-global(color-adjust($primary-adjust, 1-primary)),
+
+    2-secondary: color-adjust-global(color-adjust($secondary-adjust, 2-secondary)),
+
+    3-tertiary: color-adjust-global(color-adjust($tertiary-adjust, 3-tertiary)),
+
+    4-quaternary: color-adjust-global(color-adjust($quaternary-adjust, 4-quaternary)),
+
+    5-quinary: color-adjust-global(color-adjust($quinary-adjust, 5-quinary)),
+
+    6-senary: color-adjust-global(color-adjust($senary-adjust, 6-senary)),
+);
+
+//color variations
+$primary-c: (
+    0: map-get($colors-adjusted, 1-primary),
+    1: tint(map-get($colors-adjusted, 1-primary), 25%),
+    2: tint(map-get($colors-adjusted, 1-primary), 50%),
+    3: tint(map-get($colors-adjusted, 1-primary), 75%),
+);
+
+$secondary-c: (
+    0: map-get($colors-adjusted, 2-secondary),
+    1: shade(map-get($colors-adjusted, 2-secondary), 25%),
+    2: shade(map-get($colors-adjusted, 2-secondary), 50%),
+    3: shade(map-get($colors-adjusted, 2-secondary), 75%),
+);
+
+$tertiary-c: (
+    0: map-get($colors-adjusted, 3-tertiary),
+    1: shade(map-get($colors-adjusted, 3-tertiary), 25%),
+    2: shade(map-get($colors-adjusted, 3-tertiary), 50%),
+    3: shade(map-get($colors-adjusted, 3-tertiary), 75%),
+);
+
+$quaternary-c: (
+    0: map-get($colors-adjusted, 4-quaternary),
+    1: tint(map-get($colors-adjusted, 4-quaternary), 25%),
+    2: tint(map-get($colors-adjusted, 4-quaternary), 50%),
+    3: tint(map-get($colors-adjusted, 4-quaternary), 75%),
+);
+
+$quinary-c: (
+    0: map-get($colors-adjusted, 5-quinary),
+    1: tint(map-get($colors-adjusted, 5-quinary), 25%),
+    2: tint(map-get($colors-adjusted, 5-quinary), 50%),
+    3: tint(map-get($colors-adjusted, 5-quinary), 75%),
+);
+
+$senary-c: (
+    0: map-get($colors-adjusted, 6-senary),
+    1: tint(map-get($colors-adjusted, 6-senary), 25%),
+    2: tint(map-get($colors-adjusted, 6-senary), 50%),
+    3: tint(map-get($colors-adjusted, 6-senary), 75%),
+);
+
+
+
+//navbar colors
+$nav: (
+    bg-color: map-get($quinary-c,  0),
+    link-color: map-get($secondary-c, 0)
+);
+
+//section colors
+$section: (
+    primary: map-get($primary-c, 0),
+    secondary: map-get($secondary-c, 0),
+    tertiary: map-get($tertiary-c, 0)
+);
+
+//typography colors
+$typography: (
+    main-title-color: map-get($tertiary-c, 0),
+    sub-title-color: map-get($secondary-c, 3),
+    tertiary-title-color: map-get($quinary-c, 1),
+    text-color: map-get($tertiary-c, 2),
+    link-color: map-get($quaternary-c, 1),
+    link-hover-color: saturate(map-get($primary-c,  0), 50%), //saturate()
+    brand: map-get($secondary-c, 0)
+);
+
+//skill card colors
+$skill-card: (
+    title-color: map-get($primary-c, 0),
+    sub-title-color: map-get($tertiary-c, 3),
+    underline-color: map-get($secondary-c, 1),
+    is-logo-light: false //false dark, true light
+);
+
+//project card colors 
+$project-card: (
+    bg-color: map-get($quaternary-c, 0),
+    main-title-color: map-get($secondary-c, 0),
+    sub-title-color: map-get($quaternary-c, 3)
+);
+
+//button colors & sizes
+$button: (
+    secondary-color: map-get($secondary-c, 0),
+    secondary-hover-color: map-get($primary-c, 0),
+    primary-color: map-get($primary-c, 0),
+    primary-hover-color: map-get($secondary-c, 0),
+
+    size-lg-font-size: 2.2rem,
+    size-lg-padding: 1.5rem 3rem,
+
+    size-md-font-size: 2rem,
+    size-md-padding: 1.25rem 2.5rem,
+
+    size-sm-font-size: 1.8rem,
+    size-sm-padding: 1rem 2rem,
+);
+
+//input text colors
+$text-input: (
+    bg-color: map-get($quaternary-c, 0),
+    label-color: map-get($secondary-c, 0),
+
+    bg-color-active: map-get($quaternary-c, 2),
+    label-color-active: map-get($secondary-c, 2),
+
+    text-color: map-get($secondary-c, 2),
+    placeholder-color: map-get($primary-c, 3)
+);
+
+//textarea colors
+$text-area: (
+    bg-color: map-get($senary-c, 3),
+    font-color: map-get($secondary-c, 2)
+);
+
+//social colors
+$social: (
+    tg-btn-bg-color: map-get($quaternary-c, 0),
+    icon-bg-color: map-get($quaternary-c, 0)
+);
+
+//footer colors
+$footer: (
+    bg-color: map-get($primary-c, 0),
+    font-color: map-get($tertiary-c, 0)
+);
+
+//sidebar colors
+$sidebar: (
+    header-bg-color: map-get($quinary-c, 0),
+    footer-bg-color: map-get($senary-c, 0),
+    tg-btn-color: map-get($secondary-c, 0),
+    link-color: map-get($secondary-c, 0)
+);
+
+
+
+//misc
+    //tranisition default
+    $ts: all 300ms ease 0s;
+
+    //utilities margin sizes
+    $u-margin: (
+        sm: 2rem,
+        md: 4rem,
+        lg: 6rem
+    );
+
+    //media break points
+    $media-break-point: (
+        desktop: 1488px,
+        tablet: 1024px,
+        mobile: 591px,
+    );
+
+    //font family
+    $arvo-ff: 'Arvo', serif;
+    $oswald-ff: 'Oswald', sans-serif;
+    $brand-ff: 'Unica One', cursive;

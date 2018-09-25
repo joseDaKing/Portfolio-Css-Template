@@ -1,0 +1,19 @@
+.img-box {
+    width: 100%;
+    height: 100%;
+    max-width: 32rem;
+    max-height: 32rem;
+    overflow: hidden;
+    margin: auto;
+
+    &--round {
+        border-radius: 100%;
+    }
+
+    &__img{
+        display: block;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+}
