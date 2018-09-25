@@ -1,4 +1,6 @@
 :root {
+    scroll-behavior: smooth;
+    
     @include media-break-point(desktop-large) {
         font-size: 90%;
     };
@@ -10,12 +12,6 @@
     @include media-break-point(tablet) {
         font-size: 50%;
     };
-
-    /* 
-    @include media-break-point(mobile) {
-        font-size: 50%;
-    }; 
-    */
 }
 
 a {
