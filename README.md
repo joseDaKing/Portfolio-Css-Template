@@ -6,4 +6,4 @@ I took inspiration from [pinterst](https://www.pinterest.se/pin/5780793021445093
 
 Visit the [website](https://josedaking.github.io/Portfolio-website/).
 
-In this website i used a modified form of (smacss)[https://smacss.com/] css architecture and [bem](http://getbem.com/introduction/) naming convention.
+In this website i used a modified form of [smacss](https://smacss.com/) css architecture and [bem](http://getbem.com/introduction/) naming convention.
